@@ -1,0 +1,30 @@
+[project]
+name = "datasette-permissions-metadata"
+version = "0.1"
+description = "Configure permissions for Datasette 0.x in metadata.json"
+readme = "README.md"
+authors = [{name = "Simon Willison"}]
+license = {text = "Apache-2.0"}
+classifiers=[
+    "Framework :: Datasette",
+    "License :: OSI Approved :: Apache Software License"
+]
+requires-python = ">=3.8"
+dependencies = [
+    "datasette"
+]
+
+[project.urls]
+Homepage = "https://github.com/datasette/datasette-permissions-metadata"
+Changelog = "https://github.com/datasette/datasette-permissions-metadata/releases"
+Issues = "https://github.com/datasette/datasette-permissions-metadata/issues"
+CI = "https://github.com/datasette/datasette-permissions-metadata/actions"
+
+[project.entry-points.datasette]
+permissions_metadata = "datasette_permissions_metadata"
+
+[project.optional-dependencies]
+test = ["pytest", "pytest-asyncio"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "strict"
